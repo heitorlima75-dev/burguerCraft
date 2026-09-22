@@ -160,7 +160,15 @@ const styles = StyleSheet.create({
     borderRadius: 16,
   },
   destaque:{
-
+    fontSize: 16,
+    fontWeight: "800",
+    color: "#2E7D32",
+    textAlign: "center",
+    marginTop: 20,
+    width: '100%',
+    height: 30,
+    backgroundColor: '#E8F5E9',
+    borderRadius: 10
   },
   featuredTitle: {
     fontWeight: '800',

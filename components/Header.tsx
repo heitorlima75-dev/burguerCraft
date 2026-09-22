@@ -1,5 +1,6 @@
-import { Ionicons } from "@expo/vector-icons";
+
 import { Text, StyleSheet, View} from "react-native";
+import { Image } from "react-native";
 
 
 export default function Header() {
@@ -13,8 +14,12 @@ export default function Header() {
                 </View>
         
                 <View style={styles.avatarPlaceHolder}>
-                  <Ionicons name="person" size={20} color="#0c0c0c" />
+                  <Image
+                  source={require("../assets/avatar-container.png")}
+                  style={styles.avatar} 
+                />
                 </View>
+
               </View>
     );
 }
@@ -46,6 +51,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#f0f0f0',
     justifyContent: 'center',
     alignItems: 'center',
+  },
+    avatar: {
+    width: "100%",
+    height: "100%",
+    resizeMode: "cover",
   },
 
 });
