@@ -77,25 +77,29 @@ export default function App() {
           <Text style={styles.sectionTitle}>Nossos Burgers</Text>
 
           <View style={styles.menu}>
-            <CoffeeCard 
-              name="Classic Burger"
-              description="Pão brioche, blend 160g e queijo prato" 
-              price="R$ 26,00"
-            />
+              <CoffeeCard
+                image={require("./assets/classic_burguer.png")}
+                name="Classic Burger"
+                description="Pão brioche, blend 160g e queijo prato"
+                 price="R$ 26,00"
+               />
+
+              <CoffeeCard
+                image={require("./assets/bacon_crispy.png")}
+                name="Bacon Crispy"
+                description="Blend 160g com fatias crocantes de bacon"
+                price="R$ 32,00"
+                />
 
             <CoffeeCard 
-              name="Bacon Crispy"
-              description="Blend 160g com fatias crocantes de bacon" 
-              price="R$ 32,00"
-            />
-
-            <CoffeeCard 
+              image={require("./assets/chicken_crunchy.png")}
               name="Chicken Crunchy"
               description="Frango empanado com maionese da casa" 
               price="R$ 28,50"
             />
 
-            <CoffeeCard 
+            <CoffeeCard
+              image={require("./assets/veggie_grill.png")} 
               name="Veggie Grill"
               description="Hambúrguer de grão de bico e cogumelos" 
               price="R$ 29,90"
