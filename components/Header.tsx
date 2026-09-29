@@ -26,7 +26,7 @@ export default function Header() {
 
 const styles = StyleSheet.create({
     header: {
-    width: '100%',
+    width: '390%',
     paddingHorizontal: 24,
     paddingTop: 67,
     paddingBottom: 20,
@@ -37,18 +37,19 @@ const styles = StyleSheet.create({
   headerTitle: {
     fontSize: 22,
     fontWeight: '800',
-    color: '#2f2d2c',
+    color: '#1E1E1E',
   },
   headerSubtitle: {
-    fontSize: 14,
-    color: '#9b9b9b',
+    fontSize: 12,
+    color: '#6C757D',
     marginTop: 4,
+    fontWeight: "500"
   },
   avatarPlaceHolder: {
     width: 44,
     height: 44,
     borderRadius: 22,
-    backgroundColor: '#f0f0f0',
+    backgroundColor: '#E9ECEF',
     justifyContent: 'center',
     alignItems: 'center',
   },

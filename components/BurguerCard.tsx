@@ -56,8 +56,6 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.05,
     elevation: 5,
     marginBottom: 16,
-
-    // Faz a imagem respeitar o arredondamento do card
     overflow: "hidden",
   },
 
@@ -73,7 +71,7 @@ const styles = StyleSheet.create({
 
   cardTitle: {
     fontSize: 16,
-    fontWeight: "700",
+    fontWeight: "900",
     color: "#2f2d2c",
   },
 
@@ -85,7 +83,7 @@ const styles = StyleSheet.create({
 
   cardPrice: {
     fontSize: 16,
-    fontWeight: "800",
+    fontWeight: "900",
     marginTop: 12,
     color: "#E65100",
   },

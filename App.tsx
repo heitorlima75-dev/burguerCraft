@@ -12,8 +12,8 @@ import {
 import Header from './components/Header';
 import Footer from './components/Footer';
 import CoffeeCard from './components/BurguerCard';
-import CustomButton from './components/CustomButton';
 import { AntDesign } from '@expo/vector-icons'; 
+import { ImageBackground } from 'react-native/types_generated/index';
 
 
 export default function App() {
@@ -117,9 +117,20 @@ export default function App() {
               onChangeText={setName}
             />
 
-            <CustomButton title='Fazer meu pedido' onPress={handleOrder}/>
+            <TouchableOpacity style={styles.button} onPress={handleOrder} activeOpacity={0.8} 
+            >
+              <Text style={styles.buttonText}>Fazer meu pedido</Text>
+              </TouchableOpacity>
+
             {message !== "" && (
-              <Text style={styles.messageText}>{message}</Text>     
+              <View style={styles.messageBox}>
+                <View style={styles.checkAvatar}>
+                <AntDesign name="check"
+                size={18} color="#ffffff" />
+                </View>
+                
+              <Text style={styles.messageText}>{message}</Text> 
+              </View>    
             )}
           </View>
         
@@ -145,48 +156,51 @@ const styles = StyleSheet.create({
     marginBottom: 24,
   },
   conteudoTitle: {
-    fontSize: 22,
-    fontWeight: '800',
-    color: '#2f2d2c',
+    fontSize: 32,
+    fontWeight: '900',
+    color: '#1E1E1E',
   },
   conteudoSubtitle: {
-    fontSize: 16,
-    color: '#9b9b9b',
+    fontSize: 15,
+    color: '#6C757D',
     marginTop: 8,
+    fontWeight: '400',
   },
   featured: {
     backgroundColor: '#ffffff',
-    padding: 16,
-    borderRadius: 24,
+    borderRadius: 20,
     marginBottom: 32,
   },
   image: {
     width: '100%',
     height: 180,
     marginBottom: 16,
-    borderRadius: 16,
-
+    borderTopLeftRadius: 20,
+    borderTopRightRadius: 20,
+    borderBottomLeftRadius: 0,
+    borderBottomRightRadius: 0,
   },
   destaque:{
     fontSize: 13,
-    fontWeight: "700",
+    fontWeight: "800",
     color: "#E65100",
     textAlign: "center",
     marginTop: 11,
-    width: '50%',
+    width: '40%',
     height: 20,
     backgroundColor: '#FFF3E0',
     borderRadius: 10,
   },
   featuredTitle: {
-    fontWeight: '800',
-    color: '#2f2d2c',
-    fontSize: 20,
+    fontWeight: '900',
+    color: '#1E1E1E',
+    fontSize: 22,
     marginTop: 10
   },
   featuredDescription: {
-    fontSize: 14,
-    color: '#9b9b9b',
+    fontSize: 13,
+    fontWeight: '400',
+    color: '#6C757D',
     marginTop: 4,
     marginBottom: 12, 
   },
@@ -198,14 +212,15 @@ const styles = StyleSheet.create({
     marginTop: 8,
   },
   featuredPrice: {
-    fontSize: 18,
+    fontSize: 24,
     color: '#E65100',
-    fontWeight: '800'
+    fontWeight: '900',
+    marginBottom: 11,
   },
   sectionTitle: {
     fontSize: 22,
-    fontWeight: '800',
-    color: '#2f2d2c',
+    fontWeight: '900',
+    color: '#1E1E1E',
     marginBottom: 16,
   },
   menu: {
@@ -225,32 +240,29 @@ const styles = StyleSheet.create({
   },
   question: {
     fontSize: 18,
-    fontWeight: '800',
-    color: '#2f2d2c',
-    marginBottom: 16,
+    fontWeight: '900',
+    color: '#1E1E1E',
   },
   input: {
     width: '100%',
     height: 56,
-    backgroundColor: '#f0f0f0',
+    backgroundColor: '#efeae9ff',
     borderRadius: 10,
-    paddingHorizontal: 16, // Adicionado para o texto não ficar colado na borda
-    marginBottom: 16,     // Adicionado espaço antes do botão
+    paddingHorizontal: 16, 
+    marginBottom: 16,
+    fontWeight: '500',  
   },
   messageText: {
-    fontSize: 16,
-    fontWeight: "800",
-    color: "#2E7D32",
-    textAlign: "center",
-    marginTop: 20,
-    width: '100%',
-    height: 30,
-    backgroundColor: '#E8F5E9',
-    borderRadius: 10
+    flex: 1,
+    fontSize: 14,
+    fontWeight: "700",
+    color: "#2E7D32"
+
   },
   subtitlequestion: {
-    fontSize: 14,
-    color: '#9b9b9b',
+    fontSize: 12,
+    color: '#6C757D',
+    fontWeight: "400",
     marginTop: 4,
     marginBottom: 12, 
   },
@@ -263,6 +275,38 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   addDestaque:{
-
+  },
+  button: {
+    width: '100%',
+    backgroundColor: '#E65100',
+    borderRadius: 30,
+    paddingVertical: 16,
+    paddingHorizontal: 30,
+    alignItems: 'center',
+    marginTop: 5,
+    elevation: 4
+  },
+  buttonText: {
+    fontSize: 16,
+    color: '#FFFFFF',
+    fontWeight: "700"
+  },
+  messageBox: {
+    width: "100%",
+    backgroundColor: "#E8F5E9",
+    borderRadius: 12,
+    padding: 12,
+    marginTop: 20,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10
+  },
+  checkAvatar: {
+    width: 32,
+    height: 32,
+    borderRadius: 16,
+    backgroundColor: '#2E7D32',
+    justifyContent: 'center',
+    alignItems: 'center'
   }
 });
